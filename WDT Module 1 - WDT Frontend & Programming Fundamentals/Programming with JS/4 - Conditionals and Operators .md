@@ -20,7 +20,6 @@
 **Code Practice**
 
 ```
-
 var myGrade = 100;
 var letterGrade = "";
 var passFail = "";
@@ -41,5 +40,4 @@ if (myGrade >= 90){
   passFail = "did not pass";
 }
 console.log("You " + passFail + " with a grade of " + letterGrade +".");
-
 ```

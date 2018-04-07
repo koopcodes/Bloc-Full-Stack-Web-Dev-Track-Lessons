@@ -1,6 +1,6 @@
 <p style="font-weight: bold; text-align: center">WDT Frontend & Programming Fundamentals<br>
 Programming with JS<br>
-Checkpoint 14 - Advanced DOM Manipulationl</p>
+Checkpoint 14 - Advanced DOM Manipulation</p>
 
 > **Q1: What is the difference between `document.querySelector()` and `document.querySelectorAll()`?**
 

@@ -9,15 +9,15 @@
 
 > **Q2: If you want to create a variable called `mentor` and set its value equal to the name of your mentor, how would you do that?**
 
-**A2: ** ```var mentor = "Jacob";```
+**A2:** ```var mentor = "Jacob";```
 
 > **Q3:  How would you then log the value of `mentor` to the console?**
 
-**A3: **  ```console.log(mentor);```
+**A3:**  ```console.log(mentor);```
 
 > **Q4:  Describe the difference between `let`, `var`, and `const`.**
 
-**A4: ** `let`, `var`, and `const` are three ways to declare a variable in ECMAScript6 with `let` and `const` being new additions.
+**A4:** `let`, `var`, and `const` are three ways to declare a variable in ECMAScript6 with `let` and `const` being new additions.
 
   * `var` works as it always has and can be modified 1) globally if it's outside of any functions, or 2) locally accessible only inside the function in which it was declared.
 
