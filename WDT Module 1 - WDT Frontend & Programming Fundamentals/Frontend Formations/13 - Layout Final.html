@@ -1,0 +1,134 @@
+<!--
+**_Questions_**
+
+> List the three different wats to create layouts for a site.
+
+A:
+* The box model
+* The flexbox model
+* The grid model
+
+> List the steps one could use to use the Chrome Developer Tools to alter a websites CSS.
+
+A: 
+
+1. Right click on a web page in Chrome
+2. Select Inspect
+    _OR_
+3. Instead of steps 1 & 2, press `ctrl+shift+I`
+4. Once DevTools comes up select the *Styles tab* on the right side of the *Element panel*
+5. Select an Element in the DOM tree in the Element panel
+5. In the Styles tab yuou can toggle CSS properties of the selected elements on & off, as well as edit their attributes  
+
+**_Code_**
+```
+
+
+```
+
+-->
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="blocwdt-mod1-chkpt11-Layout.css">
+</head>
+
+<body>
+	<header>
+		<h1>Welcome to Bloc.io Tac.ios!</h1>
+	</header>
+
+	<div id='column-1'>
+		<nav>
+			<ul>
+				<li><a href="/index.html">Home</a></li>
+				<li><a href="/contact.html">Contact Us</a></li>
+				<li><a href="/about.html">About Us</a></li>
+			</ul>
+		</nav>
+		<section id="form">
+			<form action="/form.js" method="post">
+				<fieldset>
+					<legend>Reservations</legend>
+					<!--<label for="firstName" style="text-align:left">First Name</label>-->
+					<input type="text" id="firstName" placeholder="First Name">
+					<!--<label for="lastName" style="text-align:left">Last Name</label>-->
+					<input type="text" placeholder="Last Name" id="lastName">
+					<!--<label for="email" style="text-align:left">Email Address</label>-->
+					<input type="email" id="email" placeholder="Email">
+					<!--<label for="tel" style="text-align:right">Telephone Number</label>-->
+					<input type="tel" id="tel" placeholder="Telephone">
+					<select class="drop" name="restimes">
+                    <option selected disabled>Pick an available time</option>
+                    <option value="1">Tuesday @ 6PM</option>
+                    <option value="2">Tuesday @ 7PM</option>
+                    <option value="3">Wednesday @ 5PM</option>
+                    <option value="4">Wednesday @ 9PM</option>
+                </select>
+					<textarea cols=5 rows=2 class="request" placeholder="Comments or Requests"></textarea>
+					<input id="button" type="submit" value="Submit" id="submit">
+				</fieldset>
+			</form>
+		</section>
+		<div id="slogan">
+			<p>We only make tacos but they are THE BEST so be prepared to wait unless you have a reservation</p>
+			<img src="https://cdn.theatlantic.com/assets/media/img/mt/2015/01/RTX18UYN-1/lead_large.jpg?1430147176" alt="Expect Long Lines">
+			<p>FREE Taco Delivery for Late Night Coders ONLY</p>
+		</div>
+	</div>
+
+	<div id='column-2'>
+		<section class="om">Our Menu</section>
+		<table>
+			<tr>
+				<th>Quantity</th>
+				<th>Item</th>
+				<th>Price</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Bloc.io Tac.io<img src="https://cdn.pixabay.com/photo/2013/07/13/09/37/taco-155812_1280.png" alt="Taco"></td>
+				<td>$4</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Bloc.io Tac.ios<img src="https://cdn.pixabay.com/photo/2013/07/13/09/37/taco-155812_1280.png" alt="Taco"><img src="https://cdn.pixabay.com/photo/2013/07/13/09/37/taco-155812_1280.png" alt="Taco"></td>
+				<td>$7</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Bloc.io Tac.ios<img src="https://cdn.pixabay.com/photo/2013/07/13/09/37/taco-155812_1280.png" alt="Taco"><img src="https://cdn.pixabay.com/photo/2013/07/13/09/37/taco-155812_1280.png" alt="Taco"><img src="https://cdn.pixabay.com/photo/2013/07/13/09/37/taco-155812_1280.png"
+					 alt="Taco"></td>
+				<td>$10</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Bloc.io Tac.ios<img src="https://cdn.pixabay.com/photo/2013/07/13/09/37/taco-155812_1280.png" alt="Taco"><img src="https://cdn.pixabay.com/photo/2013/07/13/09/37/taco-155812_1280.png" alt="Taco"><img src="https://cdn.pixabay.com/photo/2013/07/13/09/37/taco-155812_1280.png"
+					 alt="Taco"><img src="https://cdn.pixabay.com/photo/2013/07/13/09/37/taco-155812_1280.png" alt="Taco"></td>
+				<td>$12</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Bloc.io Tac.io Mega Pack (100 Tac.ios)<img src="https://cdn.pixabay.com/photo/2014/12/21/23/35/quesadilla-575610_1280.png" alt="Tacos"></td>
+				<td>$100</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Bloc.io Tac.io Mega Pack (200 Tac.ios)<img src="https://cdn.pixabay.com/photo/2014/12/21/23/35/quesadilla-575610_1280.png" alt="Tacos"><img src="https://cdn.pixabay.com/photo/2014/12/21/23/35/quesadilla-575610_1280.png" alt="Tacos"></td>
+				<td>$175</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Bloc.io Tac.io Mega Pack (300 Tac.ios)<img src="https://cdn.pixabay.com/photo/2014/12/21/23/35/quesadilla-575610_1280.png" alt="Tacos"><img src="https://cdn.pixabay.com/photo/2014/12/21/23/35/quesadilla-575610_1280.png" alt="Tacos"><img src="https://cdn.pixabay.com/photo/2014/12/21/23/35/quesadilla-575610_1280.png"
+					 alt="Tacos"></td>
+				<td>$225</td>
+			</tr>
+        </div>
+			<footer>
+				<!-- <p>Koop Codes &copy 2018</p> -->
+			</footer>
+            <script type="text/javascript" src="index.js"></script>
+        
+    </body>
+
+</html>

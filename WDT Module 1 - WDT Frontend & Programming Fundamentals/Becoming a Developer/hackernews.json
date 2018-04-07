@@ -1,0 +1,144 @@
+[object Object] {
+  articles: [
+		[object Object] {
+  		author: "Google",
+  		description: "News and insights on Google platforms, tools, and events.",
+  		publishedAt: "2018-03-30T20:37:55.0006375Z",
+  		source: [object Object] {
+    			id: "hacker-news",
+    			name: "Hacker News"
+				},
+  		title: "Transitioning Google URL Shortener to Firebase Dynamic Links",
+  		url: "https://developers.googleblog.com/2018/03/transitioning-google-url-shortener.html",
+  		urlToImage: 		"http://4.bp.blogspot.com/-fWEPzhrhdqk/WKbYSrN1_8I/AAAAAAAATXE/m2-ZgsirkMYKc_YhcehEb0iUdyGtLs8KACK4B/s1600/lockup_google_developers_horizontal_knockout_wht.png"
+				},
+		[object Object
+		] {
+  		author: "facebook",
+  		description: "zstd - Zstandard - Fast real-time compression algorithm",
+  		publishedAt: "2018-03-30T18:15:07.0617608Z",
+  		source: [object Object
+				] {
+  		  		id: "hacker-news",
+  		  		name: "Hacker News"
+				},
+  		title: "facebook/zstd",
+  		url: "https://github.com/facebook/zstd/releases/tag/v1.3.4",
+  		urlToImage: "https://avatars0.githubusercontent.com/u/69631?s=400&v=4"
+		},
+		[object Object
+		] {
+  author: "TensorFlow",
+  description: "Posted by Josh Gordon and Sara Robinson, Developer Advocates",
+  publishedAt: "2018-03-30T17:45:53Z",
+  source: [object Object
+			] {
+    id: "hacker-news",
+    name: "Hacker News"
+			},
+  title: "Introducing TensorFlow.js: Machine Learning in Javascript",
+  url: "https://medium.com/tensorflow/introducing-tensorflow-js-machine-learning-in-javascript-bf3eab376db",
+  urlToImage: "https://cdn-images-1.medium.com/max/1200/0*hfplSJ9gMJCjluG-."
+		},
+		[object Object
+		] {
+  author: "Matt Burns",
+  description: "The latest update to macOS provides support for external graphics card. Apple announced this would hit the OS last June at WWDC and now it’s finally here. The update allows Mac users to increase the graphical processing power through an external graphics card…",
+  publishedAt: "2018-03-30T13:10:42Z",
+  source: [object Object
+			] {
+    id: "hacker-news",
+    name: "Hacker News"
+			},
+  title: "MacOS finally gains external GPU support",
+  url: "https://techcrunch.com/2018/03/30/macos-finally-gains-external-gpu-support/",
+  urlToImage: "https://techcrunch.com/wp-content/uploads/2018/03/screen-shot-2018-03-30-at-9-09-27-am.png?w=764"
+		},
+		[object Object
+		] {
+  author: null,
+  description: "Nicotinomide riboside (NR) mimics caloric restriction, kick-starting the same pathways responsible for reducing cardiovascular aging.",
+  publishedAt: "2018-03-29T21:00:09Z",
+  source: [object Object
+			] {
+    id: "hacker-news",
+    name: "Hacker News"
+			},
+  title: "A pill that staves off aging? It's on the horizon",
+  url: "https://www.colorado.edu/today/2018/03/28/pill-staves-aging-its-horizon",
+  urlToImage: "https://www.colorado.edu/today/sites/default/files/styles/medium/public/article-thumbnail/woman-3187087_1920.jpg?itok=ZHxY54Aw"
+		},
+		[object Object
+		] {
+  author: "Yasmin Anwar",
+  description: "Schedules of night owls, morning larks and daytime finches may predict their educational outcomes",
+  publishedAt: "2018-03-29T16:27:23Z",
+  source: [object Object
+			] {
+    id: "hacker-news",
+    name: "Hacker News"
+			},
+  title: "Poor grades tied to class times that don’t match our biological clocks",
+  url: "http://news.berkeley.edu/2018/03/29/social-jetlag/",
+  urlToImage: "http://news.berkeley.edu/wp-content/uploads/2018/03/SleepingStudent750.jpg"
+		},
+		[object Object
+		] {
+  author: "Troy Hunt",
+  description: "The penny first dropped for me just over 7 years ago to the day: The only secure password is the one you can't remember. In an era well before the birth of Have I Been Pwned (HIBP), I was doing a bunch of password analysis on data breaches and wouldn't",
+  publishedAt: "2018-03-29T08:00:45Z",
+  source: [object Object
+			] {
+    id: "hacker-news",
+    name: "Hacker News"
+			},
+  title: "Have I Been Pwned is Now Partnering With 1Password",
+  url: "https://www.troyhunt.com/have-i-been-pwned-is-now-partnering-with-1password/",
+  urlToImage: "https://www.troyhunt.com/content/images/2018/03/1Password-Integration.jpg"
+		},
+		[object Object
+		] {
+  author: null,
+  description: "I’ve been going through a period of programming language wanderlust over the past couple months. Recently, I’ve been quite interested in Rust. Coming from Python, I’ve found a lot of Rust’s language features to be quite powerful.",
+  publishedAt: "2018-03-23T12:23:22Z",
+  source: [object Object
+			] {
+    id: "hacker-news",
+    name: "Hacker News"
+			},
+  title: "Python Idioms in Rust",
+  url: "http://benjamincongdon.me/blog/2018/03/23/Python-Idioms-in-Rust/",
+  urlToImage: "http://benjamincongdon.me/img/2018-03-23-Python-Idioms-in-Rust/crab-baskets.jpg"
+		},
+		[object Object
+		] {
+  author: "Jason Daley",
+  description: "Years of habitat destruction and poaching have reduced giraffe numbers by 30 percent, placing them in the vulnerable category for the first time",
+  publishedAt: "2016-12-09T18:38:51Z",
+  source: [object Object
+			] {
+    id: "hacker-news",
+    name: "Hacker News"
+			},
+  title: "Giraffes Silently Slip Onto the Endangered Species List",
+  url: "https://www.smithsonianmag.com/smart-news/giraffes-silently-slip-endangered-species-list-180961372/#pjgVVUWGgDD6WdVV.01?no-ist",
+  urlToImage: "https://thumbs-prod.si-cdn.com/p1DXYPTTh6f7v_1Y_zrEGWOO8Ng=/1072x720/filters:no_upscale()/https://public-media.smithsonianmag.com/filer/cf/cc/cfcc0f3f-fb25-43d9-a867-7d21dbac2529/giraffe.jpg"
+		},
+		[object Object
+		] {
+  author: "Bob Briscoe, Andrew Odlyzko and Benjamin Tilly",
+  description: "Communications networks increase in value as they add members—but by how much? The devil is in the details",
+  publishedAt: "2006-07-01T18:15:00Z",
+  source: [object Object
+			] {
+    id: "hacker-news",
+    name: "Hacker News"
+			},
+  title: "Metcalfe’s Law is Wrong",
+  url: "https://spectrum.ieee.org/computing/networks/metcalfes-law-is-wrong",
+  urlToImage: "https://spectrum.ieee.org/image/MjkzMzI2MA.jpg"
+		}
+	],
+  status: "ok",
+  totalResults: 10
+}

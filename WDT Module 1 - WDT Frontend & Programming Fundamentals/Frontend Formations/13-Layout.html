@@ -1,0 +1,79 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="blocwdt-mod1-chkpt11-Layout.css">
+</head>
+<header>
+	<h1>Welcome to Bloc Tacos!</h1>
+</header>
+
+<body>
+
+	<div id='column-1'>
+		<section>
+			<form action="/form.php" method="post">
+				<fieldset>
+					<legend>Reservation Form</legend>
+					<label for="firstName" style="text-align:left">First Name</label>
+					<input type="text" id="firstName" style="float:left">
+					<br>
+					<label for="lastName" style="text-align:left">Last Name</label>
+					<input type="text" id="lastName" style="float:left">
+					<br>
+					<label for="email" style="text-align:left">Email Address </label>
+					<input type="email" id="email" style="float:left">
+					<br>
+					<label for="tel" style="text-align:left">Telephone Number </label>
+					<input type="tel" id="tel" style="float:left">
+					<br>
+					<select name="restimes" style="float:left">
+						<option selected disabled>Pick an available time</option>
+						<option value="1">Tuesday @ 6PM</option>
+						<option value="2">Tuesday @ 7PM</option>
+						<option value="3">Wednesday @ 5PM</option>
+						<option value="4">Wednesday @ 9PM</option>
+					</select>
+					<br>
+					<textarea col="180" row="25" style="float:left" placeholder="Additional Comments or Requests Here"></textarea>
+					<input type="submit" value="Submit">
+				</fieldset>
+			</form>
+		</section>
+	</div>
+
+	<div id='column-2'>
+		<table>
+			<tr>
+				<th>Quantity</th>
+				<th>Item</th>
+				<th>Price</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Bloco Taco</td>
+				<td>$4</td>
+				<tr>
+					<td>2</td>
+					<td>Bloco Taco</td>
+					<td>$7</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Bloco Taco</td>
+					<td>$10</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Bloco Taco</td>
+					<td>$12</td>
+				</tr>
+				<tr class="mega">
+					<td>1</td>
+					<td>Bloc.io Tac.io
+						<br>Mega Pack</td>
+					<td>$100</td>
+				</tr>
+	</div>
+</body>
+
+</html>

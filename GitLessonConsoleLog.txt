@@ -1,0 +1,382 @@
+koop@Kooptop:/home/koop/bloc>> cd lessons_learned
+koop@Kooptop:/home/koop/bloc/lessons_learned>> touch Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> nano Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git init
+Initialized empty Git repository in /home/koop/bloc/lessons_learned/.git/
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Readme.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git add Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Readme.md
+
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git commit -m "First CLI git commit"
+[master (root-commit) a551b8a] First CLI git commit
+ Committer:  <koop@Kooptop.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 6 insertions(+)
+ create mode 100644 Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git config --global --edit
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git commit --ammend --reset-author
+error: unknown option `ammend'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit hook
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git commit --amend --reset-author
+[master bd07995] First CLI git commit
+ Committer:  <koop@Kooptop.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 6 insertions(+)
+ create mode 100644 Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git commit -m "First CLI git commit"
+On branch master
+nothing to commit, working directory clean
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git log
+commit bd079959261887880ca40875273943d0e98cafc9
+Author:  <koop@Kooptop.localdomain>
+Date:   Thu Mar 15 21:50:44 2018 -0700
+
+    First CLI git commit
+
+    Committer:  <koop@koop.codes>
+    On branch master
+    Initial commit
+    Changes to be committed:
+    new file:   Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git commit --amend --reset-author
+[master 2d58727] First CLI git commit
+ Committer:  <koop@Kooptop.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 6 insertions(+)
+ create mode 100644 Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git config --global user.name "koopdev"
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git config --global user.email koop@koop.codes
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git log
+commit 2d58727eb7e87925f8247cc51a188e35d44488b3
+Author:  <koop@Kooptop.localdomain>
+Date:   Thu Mar 15 21:53:46 2018 -0700
+
+    First CLI git commit
+
+    Committer:  <koop@koop.codes>
+    On branch master
+    Initial commit
+    Changes to be committed:
+    new file:   Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git config --global --edit
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git log
+commit 2d58727eb7e87925f8247cc51a188e35d44488b3
+Author:  <koop@Kooptop.localdomain>
+Date:   Thu Mar 15 21:53:46 2018 -0700
+
+    First CLI git commit
+
+    Committer:  <koop@koop.codes>
+    On branch master
+    Initial commit
+    Changes to be committed:
+    new file:   Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git commit --amend --reset-author
+[master 98b88e1] First CLI git commit
+ Committer:  <koop@Kooptop.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 6 insertions(+)
+ create mode 100644 Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git remote add bloc https://github.com/koopdev/bloc.git
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git puch -u bloc master
+git: 'puch' is not a git command. See 'git --help'.
+
+Did you mean this?
+        push
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git push -u bloc master
+Username for 'https://github.com': koopdev
+Password for 'https://koopdev@github.com':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 432 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/koopdev/bloc.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from bloc.
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git pull bloc master
+From https://github.com/koopdev/bloc
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git diff HEAD
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git diff HEAD
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git diff --staged
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git reset Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git checkout -- Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git branch clean_up
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git checkout clean_up
+Switched to branch 'clean_up'
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git rm *.md
+rm 'Readme.md'
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git commit -m "Remove all mds"
+[clean_up a337f89] Remove all mds
+ Committer:  <koop@Kooptop.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 6 deletions(-)
+ delete mode 100644 Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'bloc/master'.
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git merge clean_up
+Updating 98b88e1..a337f89
+Fast-forward
+ Readme.md | 6 ------
+ 1 file changed, 6 deletions(-)
+ delete mode 100644 Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git branch -d clean_up
+Deleted branch clean_up (was a337f89).
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git push
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': git config --globalmpush.default simple
+Password for 'https://git config --globalmpush.default simple@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/koopdev/bloc.git/'
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git config --global push.default simple
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git push
+Username for 'https://github.com': koopdev
+Password for 'https://koopdev@github.com':
+Counting objects: 2, done.
+Writing objects: 100% (2/2), 192 bytes | 0 bytes/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/koopdev/bloc.git
+   98b88e1..a337f89  master -> master
+koop@Kooptop:/home/koop/bloc/lessons_learned>> ll
+total 0
+drwxrwxrwx 1 koop koop 4096 Mar 15 22:07 .git
+drwxrwxrwx 1 koop koop 4096 Mar 15 22:07 .
+drwxrwxrwx 1 koop koop 4096 Mar 15 21:37 ..
+koop@Kooptop:/home/koop/bloc/lessons_learned>> touch Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> nano Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git status
+On branch master
+Your branch is up-to-date with 'bloc/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Readme.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git commit -m "First CLI git commit"
+On branch master
+Your branch is up-to-date with 'bloc/master'.
+Untracked files:
+        Readme.md
+
+nothing added to commit but untracked files present
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git log
+commit a337f8968a13d43ece6c803b770121e8e5969fdf
+Author:  <koop@Kooptop.localdomain>
+Date:   Thu Mar 15 22:06:31 2018 -0700
+
+    Remove all mds
+
+commit 98b88e19fc85d2d8e88a89d2815098fd27789142
+Author:  <koop@Kooptop.localdomain>
+Date:   Thu Mar 15 21:56:45 2018 -0700
+
+    First CLI git commit
+
+    Committer:  <koop@koop.codes>
+    On branch master
+    Initial commit
+    Changes to be committed:
+    new file:   Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git remote add bloc https://github.com/koopdev/bloc.git
+fatal: remote bloc already exists.
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git push -u bloc master
+Username for 'https://github.com': koopdev
+Password for 'https://koopdev@github.com':
+Branch master set up to track remote branch master from bloc.
+Everything up-to-date
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git pull bloc master
+From https://github.com/koopdev/bloc
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git diff HEAD
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git diff --staged
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git checkout -- Readme.md
+error: pathspec 'Readme.md' did not match any file(s) known to git.
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git checkout master
+Already on 'master'
+Your branch is up-to-date with 'bloc/master'.
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git push
+Username for 'https://github.com': koopdev
+Password for 'https://koopdev@github.com':
+Everything up-to-date
+koop@Kooptop:/home/koop/bloc/lessons_learned>> nano Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git commit -m "Finally?"
+On branch master
+Your branch is up-to-date with 'bloc/master'.
+Untracked files:
+        Readme.md
+
+nothing added to commit but untracked files present
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git add Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git status
+On branch master
+Your branch is up-to-date with 'bloc/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Readme.md
+
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git commit -m "Finally?"
+[master e86bc8b] Finally?
+ Committer:  <koop@Kooptop.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 6 insertions(+)
+ create mode 100644 Readme.md
+koop@Kooptop:/home/koop/bloc/lessons_learned>> git push bloc master
+Username for 'https://github.com': koopdev
+Password for 'https://koopdev@github.com':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 385 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/koopdev/bloc.git
+   a337f89..e86bc8b  master -> master
+koop@Kooptop:/home/koop/bloc/lessons_learned>>
