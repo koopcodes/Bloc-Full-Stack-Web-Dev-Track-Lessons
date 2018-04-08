@@ -3,4 +3,5 @@ git add --all: Adds all the modified and untracked files to staging area. You ca
 git commit -m "message that tells what commit is doing": Commits files in the staging area.
 git checkout master: Moves you back to the master branch.
 git merge branch-name: Merges the work you did in the branch into master.
-git push: Will push your work to the origin repository's master branch.
+git remote add origin https://github.com/YOUR_USERNAME/REPOSITORY_NAME.git
+git push -u orig master :Will push your work to the origin repository's master branch.
