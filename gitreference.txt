@@ -1,7 +1,10 @@
+git init
 git checkout -b branch-name: Create and checkout a branch to begin working.
 git add --all: Adds all the modified and untracked files to staging area. You can add file by file by using git add filename
 git commit -m "message that tells what commit is doing": Commits files in the staging area.
 git checkout master: Moves you back to the master branch.
+branch checkout merge
+fetch pull 
 git merge branch-name: Merges the work you did in the branch into master.
 git remote add origin https://github.com/YOUR_USERNAME/REPOSITORY_NAME.git
 git push -u orig master :Will push your work to the origin repository's master branch.
