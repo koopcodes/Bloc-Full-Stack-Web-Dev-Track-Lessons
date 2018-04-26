@@ -1,9 +1,12 @@
 # WDT Frontend Frameworks
 ## Project - Intro to React
-### Checkpoint 6 - ToDo Components
+### Checkpoint 7 - ToDo States and Props
 #### Exercises
 
-**E1: Read [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html) to understand how to turn a concept for an app into a set of React components.**
-**E2: Read [React Without JSX](https://facebook.github.io/react/docs/react-without-jsx.html).**
-**E3: In your own words, explain what happens behind the scenes when you use JSX.**
-> **A3: Each JSX element is basically just syntactic sugar for calling React.createElement(component, props, ...children). When using JSX, creating the ReactElement objects are handled for us. Instead of calling React.createElement for each element, the equivalent structure in JSX is: `var boldElement = <b>Text (as a string)</b>;` where boldElement is now a ReactElement. The JSX parser will read that string and call React.createElement for us. JSX is transformed into JavaScript by using a pre-processor build-tool before we load it with the browser. When we write JSX, we pass it through a transpiler that converts the JSX to JavaScript. The most common tool for this is babel. JSX is transformed into function calls and those function calls create a simple "Virtual" DOM tree. You can declare JSX per-file or per-function to tell your transpiler (eg: Babel) the name of a function that should be called at runtime for each node so we can mix JavaScript with our JSX markup. This lets us add logic inline with our views.**
+**Q1: Read React's documentation on [Lifting State Up](https://facebook.github.io/react/docs/lifting-state-up.html).**
+
+**Q2: Read [Why does React emphasize on unidirectional data flow and Flux architecture?](https://hashnode.com/post/why-does-react-emphasize-on-unidirectional-data-flow-and-flux-architecture-ciibz8ej600n2j3xtxgc0n1f0) on Hashnode.**
+
+**Q3: Why does React only allow information to be passed down in the hierarchy? What are the advantages and disadvantages of this approach? Discuss this topic with your mentor.**
+
+> **A3: React allows information to only be passed down the hierarchy to enforce unidirectional data flow. This avoids issues with multi-direcional data flows in complex apps leading to cascading updates with one change in one model triggering more updates which in turn trigger more updates. It also makes for a good way to _encapsulate_ our data (as props and states) and limit what is available to which components for what purposes**
