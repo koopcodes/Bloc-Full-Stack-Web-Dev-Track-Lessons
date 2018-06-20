@@ -4,7 +4,9 @@
 Please submit your answers to the following questions in a file called `intro_to_clean_coding_answers.txt`.
 
 1. In your own words, explain what clean code is and why it is important.
+> MyAnswer
 2. Read [this article](https://www.edn.com/design/automotive/4423428/Toyota-s-killer-firmware--Bad-design-and-its-consequences) about Toyota and their use of bad code. Although you may not yet understand all of the topics discussed, think about another commonly used object that relies on computers and explain what would happen if the code was not created to an acceptable standard.
+> My MyAnswer
 3. Would you consider the following to be clean code? Explain why or why not. If not, refactor the code.
 
 ```
@@ -18,6 +20,7 @@ FUNCTION do(x, y)               // Creating a new function
  END IF
 END FUNCTION
 ```
+> My MyAnswer
 4. Would you consider the following to be clean code? Explain why or why not. If not, refactor the code.
 ```
 FUNCTION calcPercent(sum, total)
@@ -30,10 +33,11 @@ FUNCTION calcPercent(sum, total)
  PRINT percentage
 END FUNCTION
 ```
+> My MyAnswer
 5. Using pseudocode, refactor the code for the following examples using the principles you have learned in this checkpoint.
 
 	a. The following function prints the subtotal of a customer's transaction and receives payment accordingly.
-
+> My MyAnswer
 ```
 FUNCTION checkOutCustomer(subTotal, discountRate, paymentType)
    PRINT "Your total due is: " + subTotal * discountRate + (subTotal * tax)
@@ -47,8 +51,9 @@ FUNCTION checkOutCustomer(subTotal, discountRate, paymentType)
    END IF
 END FUNCTION
 ```
-b. The following function checks out a book if there are no issues with the guest's account.
 
+b. The following function checks out a book if there are no issues with the guest's account.
+> My MyAnswer
 ```
 FUNCTION checkoutBook(book, guest)
  IF guest.accountActive THEN
@@ -65,6 +70,7 @@ FUNCTION checkoutBook(book, guest)
 END FUNCTION
 ```
 c. The following class is a code snippet that should support the transactions a customer can perform at an ATM.
+> My MyAnswer
 ```
 CLASS BankAccount
 
