@@ -1,0 +1,123 @@
+1. Clean code is Reader-Focused Development that aims to write code that not just solves the problem but strives to be as readabile and understandable, as simple and efficient, and as easy to maintain as possible while still solving the problem. This is important not just for coders you work with and those that come after you, but you yourself as well because you are likely to forget what you were thinking when you wrote it soon after you move on. Clean code will make it easier to find and fix bugs as well as add/modify features.
+“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” – Martin Fowler.
+
+2. While not as life-or-death a situation as the Toyota ECM firmware issue in the linked article the thing that comes to my mine is the ubiquitous Point-of-Sale (POS) systems billions of people use everyday.  From the barcode scanning, the itemized display and total, along with the whole electronic payment system at the end.  Again not as critical in terms of saftey but what if we couldn't trust the bar code scanners to read the items correctly, or the backend to bring up the right, or the payment to go through for the correct amount to the correct account? It was not that long ago that people did live without all those things so again, not as critical as proper throttle function in a car, but it was also someone's soul-crushing job to put little price stickers on EVERYTHING in the store and if we wanted to buy anything at the store we had to go to the bank first (if it was open), stand in line, guess how much cash we needed, not lose in on the way to the store, then watch that the cashier manually rings up everything at the correct price.  Not life-threating but it certainly would reshape how people live their lives and take a huge chunk out of the global economy as the velocity of money slowed. There are still bugs and imperfections in our POS systems and they sometimes go unnoticed because no one dies, and frankly they work well enough most of the time that most people don't even pay attention anymore.  But if you are one of the ones that do you will notice that not EVERYTHING rings up the way it is supposed to, but I must say the payment system works pretty damn flawlessly as far as me not being charged for someone else's purchases or the amounts debited match my purchase.
+
+3. No, not clean code.  Too many comments, non-descriptive function and variable names, and it does more than one thing in a single function.  Change the function and variable names like so, and the comments become unnecessary:
+
+FUNCTION convertTemperature(degrees, units)
+	IF units = 'F' THEN 
+	CALL convertFahrenheit with (degrees)
+	ELSE IF units = 'C' THEN
+	CALL convertCelsius with (degrees)
+	ELSE PRINT 'Choose F for Fahrenheit or C for Celsius'
+	END IF
+END FUNCTION
+
+FUNCTION convertFahrenheit (degrees)
+	SET temperatureCelsius to (degrees - 32) * (5/9)
+	PRINT temperatureCelsius + '°C'
+END FUNCTION
+
+FUNCTION convertCelsius (degrees)
+	SET temperatureFahrenheit to degrees * 1.8 + 32
+	PRINT temperatureFahrenheit + '°F'
+END FUNCTION
+
+4. This is a trick question I'm sure, but I'm going to say this IS clean code. The function and variable names are  descriptive.  I can tell what the function is for and how it is doing it easily. Even has an edge case handler with helpful message explaining the problem
+
+5.a. DRY the total
+FUNCTION calculateTotal
+	SET total to subTotal * discountRate + (subTotal * tax)
+	RETURN total
+END FUNCTION
+
+FUNCTION processPayment
+	PRINT 'Your total due is:' + total
+	IF paymentType = 'CASH' THEN
+       		CALL getPayment RETURNING amount
+       		PRINT "Change due: " + amount - total
+   	ELSE IF paymentType = 'CREDIT CARD' THEN
+       		CALL getPayment RETURNING amount
+       		PRINT "Your credit card has been charged: " + total
+   	END IF
+END FUNCTION
+
+5.b. Remove excessive nesting
+FUNCTION checkoutBook(book, guest)
+ IF guest.accountActive AND NOT(guest.hasOverdueBooks) AND guest.outstandingFees = 0 THEN
+           APPEND book to guest.books
+           SET book.status to "Checked Out"
+           PRINT "Your books have been issued."
+     END IF
+ ELSE
+     PRINT "Unable to check out book."
+ END IF
+END FUNCTION
+
+5.c. Split Class in to 2 different areas of concern
+CLASS Money
+
+ FUNCTION displayBalance
+    PRINT balance
+ END FUNCTION
+
+ FUNCTION deposit(amount)
+    SET balance to balance + amount
+ END FUNCTION
+
+ FUNCTION withdraw(amount)
+     IF balance > amount THEN
+       SET balance to balance - amount
+     END
+ END FUNCTION
+ ....
+ ....
+ ....
+END
+
+CLASS Marketing
+ FUNCTION creditCardOffer
+     IF NOT(customer.hasCreditCard) THEN
+         CALL offerCreditCard
+     END
+ END FUNCTION
+
+ FUNCTION checkStatus
+     IF NOT(customer.hasCheckingAccount) THEN
+         CALL offerCheckingAccount
+     END
+ END FUNCTION
+ ....
+ ....
+ ....
+END
+
+6. //Squares in javaScript
+function perfectSquare (integerArray) {
+  	var arraySum = integerArray.reduce((total, amount) => total + amount);
+  	var sumSquareRoot = Math.sqrt(arraySum);
+	return (sumSquareRoot % 1 === 0 ? sumSquareRoot : arraySum);
+}
+
+
+7. //Duplicates in javaScript
+function isDuplicates (initialArray) {
+    var counts = [];
+    for(var i = 0; i <= initialArray.length; i++) {
+        if(counts[initialArray[i]] === undefined) {
+            counts[initialArray[i]] = 1;
+        } else {
+            return true;
+        }
+    }
+    return false;
+}
+
+8. //Anagram in javaScript
+function isAnagram(string1, string2) {
+	function alphabetize(string) {
+		return string.split('').sort().join('');
+	}
+	return (alphabetize(string1) === alphabetize(string2));
+}
