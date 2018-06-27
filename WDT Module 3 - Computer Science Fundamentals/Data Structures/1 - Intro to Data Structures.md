@@ -1,0 +1,52 @@
+<p style="text-align: center; font-weight:bold">WDT Module 3 - Computer Science Fundamentals<br>Data Structures<br>Checkpoint 1 - Intoduction to Data Structures</p>
+
+**1. A line of people at an amusement park ride.**
+
+> a. √
+> b. addNewRider('Mary');
+> c. findRider('Josh');
+> d. findRider('Emily');
+    indexOf method returns -1 but I coded a more informational exception notice
+>e. cutInFrontOf('Ava', 'Melissa');
+>f. removeRider('Patrick');
+
+```javaScript
+var rideLine = ['Vivian', 'Ava', 'Josh', 'Patrick', 'Mike'];
+
+function addNewRider(rider) {
+	rideLine.push(rider);
+	return rideLine;
+}
+
+function findRider(rider) {
+	var riderIndex = rideLine.indexOf(rider);
+	if (riderIndex === -1) {
+		riderIndex = 'No such rider';
+	}
+	return riderIndex;
+}
+
+function cutInFrontOf(currentRider, newRider) {
+	currentRiderIndex = findRider(currentRider);
+	rideLine.splice(currentRiderIndex, 0, newRider);
+	return rideLine;
+}
+
+function removeRider(rider) {
+	riderIndex = findRider(rider);
+	rideLine.splice(riderIndex, 1);
+	return rideLine;
+}
+
+addNewRider('Mary');
+findRider('Josh');
+findRider('Emily');
+cutInFrontOf('Ava', 'Melissa');
+removeRider('Patrick');
+```
+
+**2. Provide another real-world example that you can model using a data structure.**
+> My laptop file system uses a Tree data structure because Trees are good for representing data with hierarchical structure.
+
+**3. How would your data structure allow developers to access and manipulate the data?**
+> To access, traverse ("walk") the tree from root to the desired node through the connections between parent nodes and their child nodes. After enumerating and searching, manipulation can be done by adding a new item at a certain position on the tree, deleting an item, pruning (removing a whole section of a tree), grafting(adding a whole section to a tree), finding the root of any node, or the lowest common ancestor of two nodes

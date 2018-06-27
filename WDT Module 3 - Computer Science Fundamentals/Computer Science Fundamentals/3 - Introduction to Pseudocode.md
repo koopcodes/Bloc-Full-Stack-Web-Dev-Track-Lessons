@@ -1,5 +1,7 @@
 <p style="text-align: center; font-weight:bold">WDT Module 3 - Computer Science Fundamentals<br>Computer Science Fundamentals<br>Checkpoint 3 - Introduction to Pseudocode</p>
 
+[Answers also here](https://gist.github.com/koopdev/8d94bd2ea0bfd0378e31a1e70085748b)
+
 **Short Answer**
 **Q1:** Why do programmers use pseudocode?
 > Pseudocode is a way to develop algorithms and express what code should do without using a particular language syntax but rather a format meant for humans to read rather than machines.  For "brainstorming before you begin to code your program."
@@ -16,7 +18,7 @@ Write the following algorithms in pseudocode:
 INPUT number1 AND number2
 FUNCTION compare(number1, number2)
 	IF number1 OR number2 are null
-		BREAK
+        BREAK
 		IF number1 > number2
 			PRINT number1
 		ELSE IF number2 > number1
@@ -68,3 +70,15 @@ function returnPhoneNumber () {
 	return phoneNumber;
 }
 ```
+Revised Psuedocode:
+```
+INPUT number1 AND number2
+FUNCTION compare(number1, number2)
+	IF number1 > number2
+		PRINT number1
+	ELSE
+		PRINT number2
+	END IF
+END FUNCTION
+```
+Thanks for the feedback, John. Yes, my `IF number1 > number2` was supposed to be nested inside of `IF number1 OR number2 are null` with my intent being to screen out any null arguments before trying to compare them. I see now it say quite clearly I have two numbers but I guess I never want to take that for granted in the real world. The 'ELSE CONTINUE' I didn't feel good about either but I wanted to include the ELSE so it was clear I did not forget it even though I had nothing for it to do. In a way trying to make myself clear actually obfuscated my intent and resulted in less readable code, a value perspective to have and something for me to watch in the future. Without having to worry about that, as well as your point taken on evaluating for equivalency, makes the code a lot simpler and easier to read.

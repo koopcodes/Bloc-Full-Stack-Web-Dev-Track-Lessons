@@ -1,0 +1,24 @@
+{
+  "name": "bloc",
+  "version": "1.0.0",
+  "description": "WDT",
+  "main": "challenge1.js",
+  "dependencies": {
+    "bloc-chat": "^0.1.0",
+    "create-react-app": "^1.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/koopdev/Bloc-Full-Stack-Web-Dev-Track-Lessons.git"
+  },
+  "author": "koop",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koopdev/Bloc-Full-Stack-Web-Dev-Track-Lessons/issues"
+  },
+  "homepage": "https://github.com/koopdev/Bloc-Full-Stack-Web-Dev-Track-Lessons#readme"
+}
