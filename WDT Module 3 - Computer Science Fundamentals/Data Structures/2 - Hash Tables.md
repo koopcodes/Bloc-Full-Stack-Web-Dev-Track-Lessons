@@ -32,12 +32,21 @@
 
 **5. Determine whether you would use a hash table or an object to store each of the following pieces of data:**
 
-> **HASH** A list of pets and their unique names.
-> **HASH** The name, age, and the birthday of your best friend.
-> **HASH** The name and location of every company in a given city.
-> **HASH** All of the books checked out from a library by a particular individual.
-> **HASH** The primary and secondary phone numbers for a contact.
-> Maybe I'm misunderstanding or this is a trick question? But as I understand the proper use cases of Maps vs. Objects it seems to me that for instances such as those described all we are looking for in most cases is to GET and occasionally SET, the keys are all the same type and the values the same type. If we needed to perform an operation on the data or needed to store strings along with numbers and functions then we would use an Object. Do I have that correct?
+
+A list of pets and their unique names.
+> A: Hash Table
+
+The name, age, and the birthday of your best friend.
+> A: Object
+
+The name and location of every company in a given city.
+> A: Hash Table
+
+All of the books checked out from a library by a particular individual.
+> A: Hash Table
+
+The primary and secondary phone numbers for a contact.
+> A: Hash Table
 
 **6. Build a system that allows a sales associate to enter a customer's name, address, and phone number into the system and look up customers using their phone numbers. Store this information in a hash table.**
 
