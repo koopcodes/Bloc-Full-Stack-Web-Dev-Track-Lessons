@@ -5,13 +5,6 @@ class LinkedList {
 		this.addToHead(...values);
 	}
 
-	_addSingleItemToHead(value) {
-		const newNode = { value };
-		newNode.next = this.head;
-		this.head = newNode;
-		this.length++;
-	}
-
 	addToHead(value) {
 		const newNode = { value };
 		newNode.next = this.head;
@@ -32,11 +25,11 @@ class LinkedList {
 		return value;
 	}
 
-	find(val) {
+	find(valueSought) {
 		let thisNode = this.head;
 
 		while (thisNode) {
-			if (thisNode.value === val) {
+			if (thisNode.value === valueSought) {
 				return thisNode;
 			}
 
@@ -46,12 +39,12 @@ class LinkedList {
 		return thisNode;
 	}
 
-	remove(val) {
+	remove(removeValue) {
 		if (this.length === 0) {
 			return undefined;
 		}
 
-		if (this.head.value === val) {
+		if (this.head.value === removeValue) {
 			return this.removeFromHead();
 		}
 
@@ -59,7 +52,7 @@ class LinkedList {
 		let thisNode = previousNode.next;
 
 		while (thisNode) {
-			if (thisNode.value === val) {
+			if (thisNode.value === removeValue) {
 				break;
 			}
 
@@ -76,13 +69,13 @@ class LinkedList {
 		return this;
 	}
 
-	removeDuplicates() {
-		for (var node = head; node != null; node = node.next) {
-			while (node.next && node.data == node.next.data) {
-				node.next = node.next.next;
+	removeSortedDuplicates(head) {
+		for (var thisNode = this.head; thisNode != null; thisNode = thisNode.next) {
+			while (thisNode.next && thisNode.value == thisNode.next.value) {
+				thisNode.next = thisNode.next.next;
 			}
 		}
-		return head;
+		return this;
 	}
 }
 const list = new LinkedList('first').addToHead('second').addToHead('third');
