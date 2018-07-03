@@ -1,8 +1,11 @@
 Exercises
 
 1. What are some pros and cons of using linked lists instead of arrays?
+Pros: No memory space wasted on placeholder elements, and memory allocated does not need to be contiguous allowing linked lists to become extremely large
+Cons: All preceding nodes must be accessed in order before one can access the desired node
 
-2. Come up with a real world example of a linked list.
+2. Come up with a real world example of a linked list
+Over time it cab be difficult for an Operating System to find contiguous disk space sufficient to store large file so it usually splits these up into chunks across the physical hard drive and stores the locations of the file fragments stored as a linked list
 
 Programming Questions
 
@@ -19,8 +22,8 @@ LinkedList.prototype.push = function(element) {
  IF the head node does not exist
    THEN SET head to node
  ELSE
-   SET current node to head
-   SET current.next to node
+   SET node.next to head
+   SET head to node
  }
 }
 
@@ -28,6 +31,20 @@ LinkedList.prototype.push = function(element) {
 Example
 Input: a -> c -> d -> d -> a
 Output: a -> c -> d
+
+function Node(data) {
+  this.data = data
+  this.next = null
+}
+
+function removeDuplicates(head) {
+  for (var node = head; node != null; node = node.next) {
+    while (node.next && node.data == node.next.data) {
+      node.next = node.next.next
+    }
+  }
+  return head
+}
 
 3. Given an unsorted singly linked list, reverse it.
 Example

@@ -75,6 +75,15 @@ class LinkedList {
 		this.length--;
 		return this;
 	}
+
+	removeDuplicates() {
+		for (var node = head; node != null; node = node.next) {
+			while (node.next && node.data == node.next.data) {
+				node.next = node.next.next;
+			}
+		}
+		return head;
+	}
 }
 const list = new LinkedList('first').addToHead('second').addToHead('third');
 
