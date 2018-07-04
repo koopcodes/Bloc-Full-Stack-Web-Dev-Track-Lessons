@@ -86,7 +86,7 @@ class LinkedList {
 			while (nextNode != null) {
 				if (thisNode.value == nextNode.value) {
 					previousNode.next = nextNode.next;
-          this.length --;
+					this.length--;
 				} else {
 					previousNode = nextNode;
 				}
@@ -94,7 +94,7 @@ class LinkedList {
 			}
 			thisNode = thisNode.next;
 		}
-    return this;
+		return this;
 	}
 
 	showAllElements() {
@@ -109,14 +109,31 @@ class LinkedList {
 		// printing the last element
 		console.log('The element at position ' + i + ' has value ' + thisNode.value);
 	}
+
+	reverseLinkedList() {
+		if (!this.head || !this.head.next) {
+			console.log('No duplicates were found. Empty or a single element Linked List.');
+			return;
+		}
+
+		var previousNode = null;
+		var thisNode = this.head;
+		var nextNode;
+
+		while (thisNode) {
+			nextNode = thisNode.next;
+			thisNode.next = previousNode;
+			previousNode = thisNode;
+			thisNode = nextNode;
+		}
+
+		this.head = previousNode;
+	}
 }
 
-
-
-// Base case : No duplicates
+// // Base case : No duplicates
 // var noDupes = new LinkedList();
 // noDupes.addToHead(1,2,3);
-
 // noDupes.removeDuplicates();
 // noDupes.showAllElements();
 
@@ -125,7 +142,6 @@ class LinkedList {
 // twoDupes.addToHead(5);
 // twoDupes.addToHead(5);
 
-
 // twoDupes.removeDuplicates();
 // twoDupes.showAllElements();
 
@@ -133,7 +149,6 @@ class LinkedList {
 // var twoNodesNoDupes = new LinkedList();
 // twoNodesNoDupes.addToHead(3);
 // twoNodesNoDupes.addToHead(5);
-
 
 // twoNodesNoDupes.removeDuplicates();
 // twoNodesNoDupes.showAllElements();
@@ -149,3 +164,9 @@ class LinkedList {
 // multipleDupes.addToHead(8,5,6,7,5,5,6,7,8);
 // multipleDupes.removeDuplicates();
 // multipleDupes.showAllElements();
+
+// Reverse an unsorted linked list
+var reverseMe = new LinkedList();
+reverseMe.addToHead(1, 2, 3, 3, 2, 1, 5);
+reverseMe.reverseLinkedList();
+reverseMe.showAllElements();
