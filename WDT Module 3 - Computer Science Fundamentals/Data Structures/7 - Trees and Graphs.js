@@ -108,4 +108,5 @@ class BinarySearchTree {
 	}
 }
 
+var BST = new BinarySearchTree();
 var root = BST.getRootNode();

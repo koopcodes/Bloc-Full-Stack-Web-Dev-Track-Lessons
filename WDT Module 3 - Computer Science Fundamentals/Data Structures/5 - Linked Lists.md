@@ -16,17 +16,16 @@ Before beginning to code, write out a plan explaining how to solve the question.
 **1. The Linked List push function should take a value, create a node, and add it to the end of a list. Below is a push function for a singly linked list. However, there is something wrong with it. Find the bug and fix the code.**
 ```
 LinkedList.prototype.push = function(element) {
- SET node = {
-   value: element,
-   next: null
- }
+  var node = new Node(element);
+  currentNode = this.head;
 
- IF the head node does not exist
-  THEN SET head to node
- ELSE
-  SET node.next to head
-  SET head to node
- }
+  if(!currentNode) {
+    this.head = node;
+    return node;
+  } else {
+    currentNode.next = node;
+    return node;
+  }
 }
 ```
 
@@ -159,7 +158,7 @@ class LinkedList {
 
 // Reverse an unsorted linked list
 var reverseMe = new LinkedList();
-reverseMe.addToHead(1,2,3,3,2,1,5);
+reverseMe.addToHead(1,9,2,8,3,7,4,6,5);
 reverseMe.reverseLinkedList();
 reverseMe.showAllElements();
 ```
