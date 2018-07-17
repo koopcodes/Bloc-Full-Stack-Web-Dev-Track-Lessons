@@ -36,6 +36,6 @@ class DumbMap {
 
 let m = new DumbMap();
 
-m.set('510-235-8956', 'Koop', '340 Goshen Ct San Ramon');
-m.set('515-415-8963', 'Loop', '341 Goshen Ct San Ramon');
+m.set('510-235-8956', 'Koop', 'San Ramon');
+m.set('515-415-8963', 'Loop', 'San Dimas');
 m.get('510-235-8956');
