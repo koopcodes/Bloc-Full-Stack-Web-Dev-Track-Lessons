@@ -1,7 +1,7 @@
 ###### Bloc Web Dev Track
 #### Module 3 - Cmputer Science Fundamentals
-### Section 4 - Databases and SQL
-## Checkpoint 4 - Fundamental SQL Commands
+### Section 5 - Databases and SQL
+## Checkpoint 1 - Behavioral Interview Practice
 
 # Exercises
 1. Choose 3 questions from the list of sample interview questions above and record yourself answering them using an unlisted Youtube channel. Submit the link with this checkpoint to get feedback on your responses.
