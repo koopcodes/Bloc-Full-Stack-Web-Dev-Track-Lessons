@@ -1,7 +1,7 @@
 ###### Bloc Web Dev Track
 #### Module 3 - Cmputer Science Fundamentals
 ### Section 5 - Databases and SQL
-## Checkpoint 1 - Behavioral Interview Practice
+## Checkpoint 2 - Resume Building
 
 # Exercises
 
