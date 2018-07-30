@@ -1,7 +1,11 @@
 #other git projects
-lessons_learned
-bloc-tack-toe
-react-to-do
+/lessons_learned
+/bloc-tack-toe
+/react-to-do
+/bloc-chat
+/bloc-jams-react
+/react-counter
+
 # Logs
 logs
 *.log
