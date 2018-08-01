@@ -12,7 +12,7 @@
 > Hashing is used to index and retrieve items in a database because it is easier to find the item using the shortened hashed key than using the original value. Hashing is generating a value or values from a string of text using a mathematical function, transforming a string of characters into a usually shorter fixed-length value or key that represents the original string. Using this fixed length key to index and retrieve items in a database is faster finding the item using the shorter hashed key than to find it using the original value.
 
 **3. How does a hash table store data?**
-> Starting with the key of a key-value pair take the key, convert the key to a hash code using a hashing function, then mod the hash code to get an array index, finally storing the value in the array index.
+> Starting with the key of a key-value pair take the key, convert the key to a hash code using a hashing function, then mod the hash code to get an array index, finally storing the value in the array at that index.
 
 **4. How are hash tables and objects different?**
 > Lots of discussion about this but few clear and definitive answers so this is a great question to ask. Best answer I found was from Mozilla:
