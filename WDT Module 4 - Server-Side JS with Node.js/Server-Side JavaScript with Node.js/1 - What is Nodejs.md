@@ -13,4 +13,5 @@
 >
 > Companies using node.js: Netflix, LinkedIn, Uber, PayPal, eBay, and NASA.
 
-3. Draw a diagram of a full-stack web application and its key components.
+3. Draw a diagram of a full-stack web application and its key components
+[Link to Koop's Full Stack Web App Components Diagram](https://github.com/koopdev/Bloc-Full-Stack-Web-Dev-Track-Lessons/blob/master/WDT%20Module%204%20-%20Server-Side%20JS%20with%20Node.js/Server-Side%20JavaScript%20with%20Node.js/Full%20Stack%20Web%20App%20Components%20Diagram.png)
