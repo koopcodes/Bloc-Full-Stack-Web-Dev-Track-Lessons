@@ -7,7 +7,7 @@
 
 1. Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
 > - sort: Uses the Merge Sort Algorithm to sort then output the lines of its input or concatenation of all files listed in its argument list in sorted order. Sorting is done based on one or more sort keys extracted from each line of input like so using `sort command.js`:
-```
+```javascript
 
 
 
@@ -72,4 +72,126 @@ module.exports.evaluateCmd = evaluateCmd;
 5. It is possible that a user will input a non-existent command to our bash shell. Within commands.js create an errorHandler function which will output an error message if the command cannot be found.
 >Hint: Use the default: case in your switch statement.
 
+- bash.js
+```javascript
+const commands = require("./commands.js");
+
+//prompt the user for input
+process.stdout.write('prompt > ');
+
+process.stdin.on('data', (userInput) => {
+  userInput = userInput.toString().trim();
+//evaluateCmd is a function which will be implemented in commands.js
+  commands.evaluateCmd(userInput);
+ });
+```
+
+- commands.js
+```javascript
+const fs = require('fs');
+
+//write out data
+function done(output) {
+	process.stdout.write(output);
+	process.stdout.write('\nprompt > ');
+}
+
+//where we will store our commands
+function evaluateCmd(userInput) {
+	//parses the user input to understand which command was typed
+	const userInputArray = userInput.split(' ');
+	const command = userInputArray[0];
+	switch (command) {
+	case 'echo':
+		//we will add the functionality of echo next within the object commandLibrary
+		commandLibrary.echo(userInputArray.slice(1).join(' '));
+		break;
+	case 'cat':
+		commandLibrary.cat(userInputArray.slice(1));
+		break;
+	case 'head':
+		commandLibrary.head(userInputArray.slice(1));
+		break;
+	case 'tail':
+		commandLibrary.tail(userInputArray.slice(1));
+		break;
+	default:
+      commandLibrary.errorHandler(userInputArray[0]);
+	}
+}
+
+//where we will store the logic of our commands
+const commandLibrary = {
+  echo: function(userInput) {
+    done(userInput);
+  },
+  cat: function(fullPath) {
+    const fileName = fullPath[0];
+    fs.readFile(fileName, (err, data) => {
+      if (err) throw err;
+      done(data);
+    });
+  },
+  head: function(fullPath) {
+    const fileName = fullPath[0];
+    fs.readFile(fileName, (err, data) => {
+      if (err) throw err;
+      let dataArray = data.toString().split('\n');
+      let lines = [];
+      for (let i = 0; i < 5; i++) {
+        lines.push(dataArray[i]);
+      }
+      data = lines.join('\n');
+      done(data);
+    });
+  },
+  tail: function(fullPath) {
+    const fileName = fullPath[0];
+    fs.readFile(fileName, (err, data) => {
+      if (err) throw err;
+      let dataArray = data.toString().split('\n');
+      let lines = [];
+      for (let i = dataArray.length - 6; i < dataArray.length; i++) {
+        lines.push(dataArray[i]);
+      }
+      data = lines.join('\n');
+      done(data);
+    });
+  },
+  errorHandler: function(userInput) {
+    done('Error! ' + userInput + ' is not a command');
+  }
+};
+
+module.exports.commandLibrary = commandLibrary;
+module.exports.evaluateCmd = evaluateCmd;
+```
+
 6. Given a string, reverse the order of characters in each word within a sentence while maintaining the original word order and whitespace and return the string.
+
+```javascript
+function reverseString(inputString) {
+  var reversedWords = [];
+  var reversedString = '';
+  var splitArray = inputString.split(' ');
+  splitArray.forEach(word => {
+    reversedWords.push(reverseWords(word));
+  });
+  reversedString = reversedWords.join(' ');
+  return reversedString;
+}
+
+function reverseWords(word) {
+  var letters = [];
+  var reverseWord = '';
+  for (let i = 0; i < word.length; i++) {
+    letters.push(word[i]);
+  }
+  for (let i = 0; i < word.length; i++) {
+    reverseWord += letters.pop();
+  }
+  return reverseWord;
+}
+
+reverseString('I go to Bloc Yippee!');
+```

@@ -19,21 +19,58 @@ function evaluateCmd(userInput) {
 	case 'cat':
 		commandLibrary.cat(userInputArray.slice(1));
 		break;
+	case 'head':
+		commandLibrary.head(userInputArray.slice(1));
+		break;
+	case 'tail':
+		commandLibrary.tail(userInputArray.slice(1));
+		break;
+	default:
+      commandLibrary.errorHandler(userInputArray[0]);
 	}
 }
 
 //where we will store the logic of our commands
 const commandLibrary = {
-	'echo': function(userInput) {
+	echo: function(userInput) {
 		done(userInput);
 	},
-	'cat': function(fullPath) {
-       const fileName = fullPath[0];
-       fs.readFile(fileName, (err, data) => {
-           if (err) throw err;
-           done(data);
-       });
-   }
+	cat: function(fullPath) {
+		const fileName = fullPath[0];
+		fs.readFile(fileName, (err, data) => {
+			if (err) throw err;
+			done(data);
+		});
+	},
+	head: function(fullPath) {
+		const fileName = fullPath[0];
+		fs.readFile(fileName, (err, data) => {
+			if (err) throw err;
+			let dataArray = data.toString().split('\n');
+			let lines = [];
+			for (let i = 0; i < 5; i++) {
+				lines.push(dataArray[i]);
+			}
+			data = lines.join('\n');
+			done(data);
+		});
+	},
+	tail: function(fullPath) {
+		const fileName = fullPath[0];
+		fs.readFile(fileName, (err, data) => {
+			if (err) throw err;
+			let dataArray = data.toString().split('\n');
+			let lines = [];
+			for (let i = dataArray.length - 6; i < dataArray.length; i++) {
+				lines.push(dataArray[i]);
+			}
+			data = lines.join('\n');
+			done(data);
+		});
+	},
+	errorHandler: function(userInput) {
+    done('Error! ' + userInput + ' is not a command');
+  }
 };
 
 module.exports.commandLibrary = commandLibrary;
