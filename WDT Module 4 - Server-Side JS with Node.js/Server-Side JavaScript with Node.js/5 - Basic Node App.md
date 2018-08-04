@@ -40,3 +40,69 @@ greetings.greetingJapanese();
 5. Utilize the two functions in main.js just like greetingEnglish and greetingJapanese.
 
 6. Create another Node module and import it into main.js. Your Node module should have at least two functions within it. Then, call a function from your Node module in main.js.
+main.js
+```javascript
+const greetings = require("./greeting.js");
+const farewells = require("./farewell.js");
+
+// "Hello"
+greetings.greetingEnglish();
+
+// "Bye"
+farewells.farewellEnglish();
+
+// "Konichiwa"
+greetings.greetingJapanese();
+
+// "Sayōnara"
+farewells.farewellJapanese();
+
+// "Hola"
+greetings.greetingSpanish();
+
+// Adiós
+farewells.farewellSpanish();
+
+// "Halló"
+greetings.greetingIcelandic();
+
+// Bless
+farewells.farewellIcelandic();
+
+```
+greeting.js
+```javascript
+exports.greetingEnglish = function(){
+ console.log("Hello");
+}
+
+exports.greetingJapanese = function(){
+ console.log("Konichiwa");
+}
+
+exports.greetingSpanish = function(){
+ console.log("Hola");
+}
+
+exports.greetingIcelandic = function(){
+ console.log("Halló");
+}
+```
+farewell.js
+```javascript
+exports.farewellEnglish = function(){
+ console.log("Bye");
+}
+
+exports.farewellJapanese = function(){
+ console.log("Sayōnara");
+}
+
+exports.farewellSpanish = function(){
+ console.log("Adiós");
+}
+
+exports.farewellIcelandic = function(){
+ console.log("Bless");
+}
+```
