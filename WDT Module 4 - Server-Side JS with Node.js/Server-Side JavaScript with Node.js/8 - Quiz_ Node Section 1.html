@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html data-ng-app='NgBloc' itemscope itemtype='http://schema.org/Product'>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"a93f3122a8","applicationID":"442416","transactionName":"JlxYRUsJCQ5RS00UFwBBRR5aDgABX0kNCAoRQBlCUQkS","queueTime":0,"applicationTime":591,"agentToken":null,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQIDUldUGwcEVlVTAQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script><link rel="stylesheet" media="screen" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700|Open+Sans+Condensed:700" />
+<script type="text/javascript">
+//<![CDATA[
+window.gon={};gon.footer_email_params={"channel":"newsletter_subscribe","program_slug":"generic"};gon.utm_params=["utm_ad","utm_adgroup","utm_bonus","utm_campaign","utm_content","utm_keyword","utm_medium","utm_source"];gon.student_comment="";gon.student={"id":2418035,"email":"thinking.bear@gmail.com","created_at":"2018-02-25T17:29:19.225-08:00","updated_at":"2018-08-03T23:47:21.658-07:00","facebook_id":null,"first_name":"Brent","last_name":"Kupras","role":"user","stripe_customer_id":"cus_CONZl0fkjxemsO","twitter_handle":"koopdev","skype_handle":null,"github_handle":"koopdev","time_zone":"Pacific Time (US \u0026 Canada)","bio":"I'm leaving the wife and kids behind in Campbell and moving in with my parents in San Ramon to do the part-time web development track full-time","photo_file_name":"20170712_111931.jpg","photo_content_type":"image/jpeg","photo_file_size":1394841,"photo_updated_at":"2018-08-01T20:02:40.252-07:00","send_new_message_emails":true,"referred_by_id":null,"slug":"brent-kupras","os":"Windows","last_seen_at":"2018-08-04T12:35:42.399-07:00","private_profile":false,"linkedin":"http://www.linkedin.com/in/brentkupras","quota":0,"old_first_visit_id":null,"selected_enrollment_chain_id":7496,"phone_num":"14084664920","title":null,"quota_limit":0,"dribbble_handle":null,"codecademy_handle":"koopdev","birthdate":"1967-05-25","gender":"Male","first_visit_id":null,"codewars_handle":null,"slack_handle":"koop","personal_website":"http://koop.codes","student_advisor":false};gon.checkpoint={"checkpoint_type":"quiz","id":2977,"name":"Quiz: Quiz: Node Section 1","path":"/checkpoints/2977","summary":"Quiz: Quiz: Node Section 1","active":true,"assignment":"","body":"","checkpoint_type_label_mappings":{"normal":"Normal (Required for all)","career_prep":"Career Prep (Required for Tracks, extra credit for Programs)","extra_credit":"Extra Credit (Extra credit for Tracks and Programs)","quiz":"Quiz (Required for all)","group_session":"Group Session (Not Required, Not Extra Credit)","assessment":"Assessment (Similar behavior to Career Prep; Required for Tracks, extra credit for programs)"},"exercises?":false,"membership_position":8,"points":1,"position":8,"quiz_id":82,"ref":"ad683d75-f9d8-437f-a4b3-fc6813da70db|0","requires_mentor_approval":true,"requires_github_branch":false,"self_approved_if_optional":true,"section_id":373,"section_ref":"4e1cf6b9-0e16-491a-b366-005166d0da41|0","active_index":8,"default_student_access":"locked","assessment":null,"exercises":[]};gon.message_thread_id=476024;
+//]]>
+</script>
+<title>Quiz: Quiz: Node Section 1 | Bloc</title>
+<meta content="Learn to code and become a web developer in Ruby on Rails, HTML, CSS, Javascript, and jQuery in Bloc's Intense Online Web Development Apprenticeship." name='description'>
+<!-- / Canonical URL -->
+<!-- / Responsive Enabled -->
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<meta name='keywords'>
+<!-- Google -->
+<meta content='z3HPw1Nm4ihrRs_dA0-OZbMNipfhdT0vu3g4s5tRSQ8' name='google-site-verification'>
+<!-- Twitter Card data -->
+<meta content='summary' name='twitter:card'>
+<meta content='@trybloc' name='twitter:site'>
+<meta content='Bloc' name='twitter:title'>
+<meta content="Learn to code and become a web developer in Ruby on Rails, HTML, CSS, Javascript, and jQuery in Bloc's Intense Online Web Development Apprenticeship." name='twitter:description'>
+<meta content='https://cdn2.bloc.io/assets/logos/bloc-logo-square-500x500-white-aeadf5158e1755bd456884b27b564ef7.jpg' name='twitter:image'>
+<!-- Open Graph data -->
+<meta content='Bloc | Online Programs in Web Development, Mobile Development, and Design' property='og:title'>
+<meta content='website' property='og:type'>
+<meta content='https://www.bloc.io/users/brent-kupras/checkpoints/2977?section_id=373' property='og:url'>
+<meta content='https://cdn2.bloc.io/assets/logos/bloc-logo-square-500x500-white-aeadf5158e1755bd456884b27b564ef7.jpg' property='og:image'>
+<meta content="Learn to code and become a web developer in Ruby on Rails, HTML, CSS, Javascript, and jQuery in Bloc's Intense Online Web Development Apprenticeship." property='og:description'>
+<meta content='Bloc' property='og:site_name'>
+<meta content='1932106' property='fb:admins'>
+<!-- Schema markup -->
+<meta content='Bloc | Online Programs in Web Development, Mobile Development, and Design' itemprop='name'>
+<meta content="Learn to code and become a web developer in Ruby on Rails, HTML, CSS, Javascript, and jQuery in Bloc's Intense Online Web Development Apprenticeship." itemprop='description'>
+<meta content='https://cdn2.bloc.io/assets/logos/bloc-logo-square-500x500-white-aeadf5158e1755bd456884b27b564ef7.jpg' itemprop='image'>
+
+<link rel="stylesheet" media="all" href="https://cdn2.bloc.io/assets/application-4b60e446ff93e736caf347ab491c25e4.css" />
+
+<script>
+  var env = "production";
+  var _rollbarConfig = {
+      accessToken: "4b86c2fdc5454fbea1382e5fff6f9889",
+      captureUncaught: true,
+      logLevel: 'error',
+      payload: {
+        environment: env
+      }
+  };
+  
+  
+  !function(a,b){function c(b){this.shimId=++h,this.notifier=null,this.parentShim=b,this.logger=function(){},a.console&&void 0===a.console.shimId&&(this.logger=a.console.log)}function d(b,c,d){!d[4]&&a._rollbarWrappedError&&(d[4]=a._rollbarWrappedError,a._rollbarWrappedError=null),b.uncaughtError.apply(b,d),c&&c.apply(a,d)}function e(b){var d=c;return g(function(){if(this.notifier)return this.notifier[b].apply(this.notifier,arguments);var c=this,e="scope"===b;e&&(c=new d(this));var f=Array.prototype.slice.call(arguments,0),g={shim:c,method:b,args:f,ts:new Date};return a._rollbarShimQueue.push(g),e?c:void 0})}function f(a,b){if(b.hasOwnProperty&&b.hasOwnProperty("addEventListener")){var c=b.addEventListener;b.addEventListener=function(b,d,e){c.call(this,b,a.wrap(d),e)};var d=b.removeEventListener;b.removeEventListener=function(a,b,c){d.call(this,a,b&&b._wrapped?b._wrapped:b,c)}}}function g(a,b){return b=b||this.logger,function(){try{return a.apply(this,arguments)}catch(c){b("Rollbar internal error:",c)}}}var h=0;c.init=function(a,b){var e=b.globalAlias||"Rollbar";if("object"==typeof a[e])return a[e];a._rollbarShimQueue=[],a._rollbarWrappedError=null,b=b||{};var h=new c;return g(function(){if(h.configure(b),b.captureUncaught){var c=a.onerror;a.onerror=function(){var a=Array.prototype.slice.call(arguments,0);d(h,c,a)};var g,i,j="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(g=0;g<j.length;++g)i=j[g],a[i]&&a[i].prototype&&f(h,a[i].prototype)}return a[e]=h,h},h.logger)()},c.prototype.loadFull=function(a,b,c,d){var e=g(function(){var a=b.createElement("script"),e=b.getElementsByTagName("script")[0];a.src=d.rollbarJsUrl,a.async=!c,a.onload=f,e.parentNode.insertBefore(a,e)},this.logger),f=g(function(){if(void 0===a._rollbarPayloadQueue)for(var b,c,d,e,f=new Error("rollbar.js did not load");b=a._rollbarShimQueue.shift();)for(d=b.args,e=0;e<d.length;++e)if(c=d[e],"function"==typeof c){c(f);break}},this.logger);g(function(){c?e():a.addEventListener?a.addEventListener("load",e,!1):a.attachEvent("onload",e)},this.logger)()},c.prototype.wrap=function(b){try{if("function"!=typeof b)return b;if(b._isWrap)return b;if(!b._wrapped){b._wrapped=function(){try{return b.apply(this,arguments)}catch(c){throw a._rollbarWrappedError=c,c}},b._wrapped._isWrap=!0;for(var c in b)b.hasOwnProperty(c)&&(b._wrapped[c]=b[c])}return b._wrapped}catch(d){return b}};for(var i="log,debug,info,warn,warning,error,critical,global,configure,scope,uncaughtError".split(","),j=0;j<i.length;++j)c.prototype[i[j]]=e(i[j]);var k="//d37gvrvc0wt4s1.cloudfront.net/js/v1.1/rollbar.min.js";_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||k;var l=c.init(a,_rollbarConfig);l.loadFull(a,b,!1,_rollbarConfig)}(window,document);
+</script>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash-compat/3.10.1/lodash.min.js"></script>
+<script src="//cdn1.bloc.io/webpack/init-bundle-ea02f13befe22370fa00.js"></script>
+<script src="//cdn1.bloc.io/webpack/application-bundle-ea02f13befe22370fa00.js"></script>
+<script>
+  Bloc = window.Bloc
+  Bloc = (typeof Bloc !== "undefined" && Bloc !== null) ? Bloc : {};
+  Bloc.login_url = "/users/auth/facebook";
+  Bloc.facebook_image_url = "https://cdn0.bloc.io/assets/facebook-d8121cdfc97638ca935538c8ebc5f108.jpg";
+  Bloc.current_visit = {"old_id":null,"visit_token":null,"visitor_token":null,"ip":"73.222.30.147","user_agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36","referrer":null,"landing_page":"https://www.bloc.io/student_dashboard/brent-kupras","user_id":null,"user_type":null,"referring_domain":null,"search_keyword":null,"browser":"Chrome","os":"Windows 10","device_type":"Desktop","country":null,"region":null,"city":null,"utm_source":null,"utm_medium":null,"utm_term":null,"utm_content":null,"utm_campaign":null,"created_at":"2018-08-04T12:07:41.920-07:00","id":"f5762b3e-579d-4716-8cd1-4fe65295e87d","visitor_id":"8d9885cc-5796-42eb-934a-1b4b6f3fe3c7","screen_height":1080,"screen_width":1920,"started_at":"2018-08-04T12:07:41.915-07:00"};
+</script>
+<script>
+  Bloc.current_user = {"first_name":"Brent","email":"thinking.bear@gmail.com","id":2418035,"last_name":"Kupras","name":"Brent Kupras","slug":"brent-kupras","title":null,"bio":"I'm leaving the wife and kids behind in Campbell and moving in with my parents in San Ramon to do the part-time web development track full-time","codecademy_handle":"koopdev","current_enrollment":{"id":44813,"created_at":"2018-08-01T17:39:32.132-07:00","updated_at":"2018-08-01T20:21:13.525-07:00","cohort_id":null,"status":"active","mentor_id":1994246,"deleted":false,"dropped_out_at":null,"birth_date":"2018-08-01T17:39:32.128-07:00","death_date":null,"sent_get_started_email":false,"old_visit_id":null,"certified":false,"locked_message":"","latest":true,"chain_id":7496,"visit_id":"801a9ed2-8b2f-4355-8c46-c6ca96038bc6","pace_id":68,"program_start_date":"2018-03-04T16:00:00.000-08:00","program_end_date":"2018-11-11T16:00:00.000-08:00"},"current_program_module":{"id":67,"name":"WDT Server-Side JS with Node.js","created_at":"2017-12-15T10:36:58.585-08:00","updated_at":"2018-06-20T06:45:08.543-07:00","position":4,"teachable":true,"weight":0.32,"program_id":12},"past_program_end_date":false,"created_at":"2018-02-25 17:29:19 -0800","facebook_id":null,"facebook_profile_picture_url":"http://graph.facebook.com//picture?width=110\u0026height=110","github_handle":"koopdev","image_src":"https://s3.amazonaws.com/bloc_photos/original/2418035/20170712_111931.jpg?1533178960","large_image_src":"https://s3.amazonaws.com/bloc_photos/large/2418035/20170712_111931.jpg?1533178960","quota":0,"quota_limit":0,"program_name":"Web Developer Track","status":"active","type":"Student","url":"/users/brent-kupras","student":true,"time_zone":{"identifier":"America/Los_Angeles","name":"Pacific Time (US \u0026 Canada)","string":"(GMT-08:00) Pacific Time (US \u0026 Canada)"},"program":{"id":12,"name":"Web Developer Track","slug":"part_time_web_dev_track","description":"","default_program_template_id":46,"category":"Web Developer Track","occupation_name":"Web Developer","slack_url":"https://students-bloc.slack.com","graduation_requirements":"3 Foundation Phases and 7 Projects","track":true,"v2":true,"supports_career_prep":true,"supports_product_feedback_requests":false,"part_time":true,"design":false,"director_slug":"richard-newman"},"pace":{"id":68,"length":35,"hours":"12-15","appointments_per_week":1,"default_payment_plan_group":"part_time_web_dev_track","expected_weekly_hours":25,"program_id":12,"program":{"id":12,"name":"Web Developer Track","slug":"part_time_web_dev_track","description":"","default_program_template_id":46,"category":"Web Developer Track","occupation_name":"Web Developer","slack_url":"https://students-bloc.slack.com","graduation_requirements":"3 Foundation Phases and 7 Projects","track":true,"v2":true,"supports_career_prep":true,"supports_product_feedback_requests":false,"part_time":true,"design":false,"director_slug":"richard-newman"}}};
+</script>
+<script>
+  Bloc.current_user.role = "user"
+</script>
+<script>
+  Bloc.current_user.isAssessor = false
+</script>
+
+
+<script type='text/javascript'>
+// Leave this in its own script tag so it won't blow up the rest of the JS.
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      Munchkin.init("412-ZQR-205", {
+        domainLevel: 2
+      });
+      didInit = true;
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+
+
+</script>
+<script type='text/javascript'>
+window.addEventListener("load", function(event) {
+  Segment.setup("aoqc6vja9l", Bloc.current_user)
+});
+
+</script>
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="lAEuPFTh+zx9d7hl681N1hH3Fqns4irPxtSqRIweXbey28qk9VJTfs4zFPKZiEm+UCXpSED/F0UtMAj+vUbLDA==" />
+
+</head>
+<body class='full-page-base-style' ng-class="{ 'showing-overlay': isShowingOverlay }">
+<div id='full_page'>
+<div class='default-js-flash-container'>
+
+</div>
+
+<div class='emelyn-layout middle'>
+<nav class='main-navigation' ng_controller='HeaderCtrl'>
+<div class='container-fluid'>
+<div class='main-navigation--left'>
+<div class='main-navigation--logo'>
+<a href="/"><img class="logo" src="https://cdn2.bloc.io/assets/landing/logo-white-a8df983a47372f1726e4fb35f1e48665.png" alt="Logo white" width="80" height="30" />
+</a></div>
+</div>
+<div class='main-navigation--links'>
+<a class="referral fa fa-heart" title="Refer a Friend" href="https://try.bloc.io/coding-buddy/"></a>
+
+<a href="/student_dashboard/brent-kupras">Dashboard</a>
+<a class='messages-link' href='/message_threads'>
+Messages
+<notification_badge></notification_badge>
+<a href="/schedule">Schedule</a>
+</a>
+<a href="/users/brent-kupras/edit">Account</a>
+<a href="/sign_out">Log Out</a>
+</div>
+</div>
+</nav>
+
+<div class='checkpoint-container' ng_controller='ExampleCheckpoints.controller'>
+<div class='fixed-checkpoint-container'>
+<div class='checkpoint-show'>
+<div class='hidden-xs checkpoint-nav'>
+<div class='pull-left'>
+<a href="/student_dashboard/brent-kupras">Dashboard</a>
+&middot;
+<a href="/users/brent-kupras/checkpoints/2959?section_id=373">Previous Checkpoint</a>
+</div>
+<div class='pull-right'>
+<a ng_click="onJumpToSubmissionClicked($event)" href="#">Jump to Submission</a>
+&middot;
+<a href="/users/brent-kupras/checkpoints/2992?section_id=373">Next Checkpoint</a>
+</div>
+</div>
+<div class='visible-xs-inline-block checkpoint-nav-container'>
+<a class="checkpoint-nav left" href="/users/brent-kupras/checkpoints/2959?section_id=373">&#8592;Prev
+</a><a ng_click="onJumpToSubmissionClicked($event)" class="checkpoint-nav center" href="#">Submission</a>
+<a class="checkpoint-nav right" href="/users/brent-kupras/checkpoints/2992?section_id=373">Next&#8594;
+</a></div>
+
+<div class='checkpoint-nav-buffer'></div>
+<quiz quiz_id='82' quiz_submission='{"attempt_count":1,"id":29981,"number_of_questions":13,"questions_and_answers":{"745":2973,"746":2974,"747":2981,"748":2983,"749":2989,"750":2992,"751":2997,"752":2999,"753":3005,"754":3006,"755":3013,"756":3015,"757":3020},"quiz_id":82,"quiz_title":"Quiz: Node Section 1","score":11,"user_id":2418035}' skip_to_end='true' submission_status="'submitted'"></quiz>
+
+<p style='height: 40px'></p>
+<div class='hidden-xs checkpoint-nav'>
+<div class='pull-left'>
+<a href="/student_dashboard/brent-kupras">Dashboard</a>
+&middot;
+<a href="/users/brent-kupras/checkpoints/2959?section_id=373">Previous Checkpoint</a>
+</div>
+<div class='pull-right'>
+<a ng_click="onJumpToSubmissionClicked($event)" href="#">Jump to Submission</a>
+&middot;
+<a href="/users/brent-kupras/checkpoints/2992?section_id=373">Next Checkpoint</a>
+</div>
+</div>
+<div class='visible-xs-inline-block checkpoint-nav-container'>
+<a class="checkpoint-nav left" href="/users/brent-kupras/checkpoints/2959?section_id=373">&#8592;Prev
+</a><a ng_click="onJumpToSubmissionClicked($event)" class="checkpoint-nav center" href="#">Submission</a>
+<a class="checkpoint-nav right" href="/users/brent-kupras/checkpoints/2992?section_id=373">Next&#8594;
+</a></div>
+
+<div class='section-spacer'></div>
+</div>
+<checkpoint_feedback checkpoint_id='2977'></checkpoint_feedback>
+<div class='section-spacer'></div>
+<div class='checkpoint-title-container'>Quiz: Quiz: Node Section 1</div>
+<div class='cp-tabs'>
+<tab_set>
+<tab_pane class='cp-tab-pane' class_name='submission-tab' icon='file-text' title='Submission'>
+<div class='checkpoint-action-content submission'>
+<div class='example-submission-form' ng_controller='SubmissionCtrl' ng_init='init()'>
+<checkpoint_activity_log checkpoint_submission_id='327212'></checkpoint_activity_log>
+</div>
+
+</div>
+</tab_pane>
+<script id='tab_set.html' type='text/ng-template'>
+<div class='tabbable'>
+<ul class='tabs'>
+<li class='tab_header' ng_class='{selected: pane.selected}' ng_click='select(pane)' ng_repeat='pane in panes'>
+<a class='{{pane.classes()}}' href='' id='{{pane.id()}}'>{{pane.title}}</a>
+<span ng_class='{selected: pane.selected}'></span>
+</li>
+</ul>
+</div>
+<div class='tab-content' ng_transclude></div>
+</script>
+
+<script id='tab_pane.html' type='text/ng-template'>
+<div class='tab-pane' ng_show='selected' ng_transclude></div>
+</script>
+
+</tab_set>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class='full-page-footer hidden-xs'>
+<div class='container'>
+<div class='column-wrapper'>
+<div class='column'>
+<h6>Programs</h6>
+<div class='program-links'>
+<section class='tracks'>
+<div class='label'>Become a Web Developer</div>
+<ul>
+<li class='program-icon-link web-track'>
+<a href="/web-developer-career-track"><i class='fa fa-cubes fa-fw'></i>
+Web Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Designer</div>
+<ul>
+<li class='program-icon-link web-track'>
+<a href="/design-bootcamp"><i class='fa fa-picture-o fa-fw'></i>
+Designer Track
+</a></li>
+</ul>
+</section>
+</div>
+
+</div>
+<div class='column'>
+<h6>About Bloc</h6>
+<ul>
+<li>
+<a href="/about">Our Team | Jobs</a>
+</li>
+<li>
+<a target="_blank" href="https://try.bloc.io/veterans/">Bloc Veterans Program</a>
+</li>
+<li>
+<a target="_blank" href="http://try.bloc.io/new-relic-bootcamp-diversity-scholarship/">Bloc&#39;s Diversity Scholarship</a>
+</li>
+<li>
+<a href="/faq">FAQ</a>
+</li>
+<li>
+<a href="http://blog.bloc.io">Blog</a>
+</li>
+<li>
+<a href="/privacy">Privacy Policy</a>
+</li>
+<li>
+<a href="/terms">Terms of Service</a>
+</li>
+<li>
+<a href="https://www.switchup.org/bootcamps/bloc">Read Reviews of Bloc</a>
+</li>
+<li>
+<a href="/catalog">Course Catalog</a>
+</li>
+</ul>
+</div>
+<div class='column'>
+<h6>Made By Bloc</h6>
+<ul>
+<li>
+<a target="_blank" href="http://try.bloc.io/tech-talks/">Tech Talks &amp; Resources</a>
+</li>
+<li>
+<a href="/coding-bootcamp-calculator">Coding Bootcamp Calculator</a>
+</li>
+<li>
+<a href="/coding-bootcamp-comparison">Programming Bootcamp Comparison</a>
+</li>
+<li>
+
+</li>
+<li>
+
+</li>
+<li>
+
+</li>
+<li>
+<a href="/ruby-warrior">Ruby Warrior</a>
+</li>
+<li>
+<a href="https://bloc.io/learn-to-code">Bootcamp Selector</a>
+</li>
+</ul>
+<h6>HIRE OUR GRADS</h6>
+<ul class='contact-list'>
+<li>
+<i class='fa fa-envelope-o'></i>
+<div class='contact-wrapper'>
+<a href="mailto:career-services@bloc.io">Contact Career Services</a>
+</div>
+</li>
+</ul>
+</div>
+<div class='column'>
+<h6>Sign Up For Our Mailing List</h6>
+<div class='footer-email-form' ng_controller='FooterEmail.controller'>
+<form class='emelyn-form-elements' id='footer_email_capture' name='footer_email_capture'>
+<input type="email" name="email" id="email" required="required" ng_model="subscription.email" class="input-dark email" />
+<input class='btn btn-dark-gray btn-mini submit' id='footer_email_signup_btn' ng_click='submit()' ng_disabled='isSubmitDisabled()' type='submit' value='Send'>
+</form>
+</div>
+<ul class='contact-list'>
+<li>
+<i class='fa fa-envelope-o'></i>
+<div class='contact-wrapper'>
+<a href="mailto:hello@bloc.io">hello@bloc.io</a>
+</div>
+</li>
+<li>
+<i class='fa fa-phone'></i>
+<div class='contact-wrapper'>
+Considering enrolling?
+<br>
+(650) 530-6427
+</div>
+</li>
+<li>
+<i class='fa fa-phone'></i>
+<div class='contact-wrapper'>
+Partnership / Corporate Inquiries?
+<br>
+(650) 741-5682
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class='bottom'>
+<p class='copyright'>Copyright © 2018 Bloc</p>
+<ul class='social-link-list'>
+<li>
+<a target="_blank" href="https://www.facebook.com/trybloc"><i class='fa fa-facebook'></i>
+</a></li>
+<li>
+<a target="_blank" href="https://twitter.com/trybloc"><i class='fa fa-twitter'></i>
+</a></li>
+<li>
+<a rel="publisher" target="_blank" href="https://plus.google.com/112610125572984281932"><i class='fa fa-google-plus'></i>
+</a></li>
+<li>
+<a target="_blank" href="https://www.youtube.com/user/BlocContent"><i class='fa fa-youtube'></i>
+</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+  window.analytics = window.analytics || []
+  analytics.push(["ready", function () {
+    console.log("No referrer override.");
+  }]);
+</script>
+
+<script src="https://cdn0.bloc.io/assets/mixpanel_tracking-7a52ecb7ee71847befbe308674840970.js"></script>
+
+<noscript>
+<div style='display: none;'></div>
+</noscript>
+<script id="IntercomSettingsScriptTag">window.intercomSettings = {"email":"thinking.bear@gmail.com","name":"Brent Kupras","created_at":1519608559,"user_id":2418035,"appointments_per_week":1,"career_note":0,"career_prep_checkpoints_submitted":0,"career_prep_eligible":true,"program_name":"Web Developer Track","dropout_reason":"N/A","latest_nps_rating":1.0,"mentor":"Shannon Bertucci","percent_behind":"5.64%","percent_time_completed":"60.64%","percentage_completed":"55.0%","program_end_date":"Nov 11 2018","program_enroll_date":"Feb 25 2018","program_start_date":"Mar  4 2018","roadmap_end_date":"Nov 11 2018","slug":"brent-kupras","status":"active","standing":"current","is_current_active_mentor":false,"employee_type":"N/A","is_assessor":false,"squad_lead":"N/A","program_director":"N/A","user_hash":"dfd72daf4b4858eaee73fcf30a52d6d11db8e3a1ef479fc4f3e20c90a8b9b929","app_id":"ywu98agw"};(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ywu98agw';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}};})()</script>
+</body>
+</html>
