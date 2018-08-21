@@ -1,8 +1,0 @@
-Model
-The Model consists of the data structures needed to store information and the methods used to interface with the data layer of the application.
-
-View
-The View controls everything a user sees and is handled by a view engine which takes dynamic content, replaces that content with placeholders inside of an HTML file, and then sends the final HTML to the client.
-
-Controller
-The Controller handles incoming requests from the client. It will interact with the model to move data in and out of the database and the view.
