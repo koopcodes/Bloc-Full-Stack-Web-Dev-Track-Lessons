@@ -108,6 +108,9 @@ New migration was created at /Users/bloc/bloccit-node/bloccit/src/db/migrations/
 `$ sequelize db:migrate`
 `$ sequelize db:migrate --env test`
 
+`$ sequelize db:migrate:status`
+`$ sequelize db:migrate:undo:all && sequelize db:migrate:undo:all --env test`
+`$ sequelize db:migrate && sequelize db:migrate --env test`
 
 # II. Create Controller
 `$ touch src/controllers/topicController.js`
